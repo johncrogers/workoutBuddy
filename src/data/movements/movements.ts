@@ -12,7 +12,7 @@ import { shoulderPress } from "./shoulderPress";
 import { squat } from "./squat";
 import { turkishGetup } from "./turkishGetup";
 
-export const movements: Movement[] = [
+const movements: Movement[] = [
   deadlift,
   turkishGetup,
   burpee,
@@ -25,3 +25,5 @@ export const movements: Movement[] = [
   latPullDown,
   seatedRow,
 ];
+
+export default movements;

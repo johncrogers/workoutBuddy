@@ -2,15 +2,13 @@ import {
   generateWorkoutPlan,
   WorkoutPlan,
 } from "../../helpers/generateWorkoutPlan";
-import { core } from "../movements/core";
-import { lower } from "../movements/lower";
-import { upper } from "../movements/upper";
+import movements from "../movements/movements";
 import { FiveThreeOne } from "./FiveThreeOne/FiveThreeOne";
 
 export const plans: WorkoutPlan[] = [
   generateWorkoutPlan(FiveThreeOne, {
-    monday: upper,
-    wednesday: lower,
-    friday: core,
+    monday: movements.filter(({ focus }) => focus === "upper"),
+    wednesday: movements.filter(({ focus }) => focus === "lower"),
+    friday: movements.filter(({ focus }) => focus === "core"),
   }),
 ];

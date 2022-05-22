@@ -1,5 +1,5 @@
+import { Set } from "../../../types/Set";
 import { seconds } from "../../constants/seconds";
-import { Set } from "./Set";
 
 export const highIntensity: Set[] = [
   { multiplier: 75, volume: 5, duration: 60 * seconds },
