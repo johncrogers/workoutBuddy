@@ -1,7 +1,9 @@
 import { Movement } from "../../types/Movement";
+import { pin } from "../equipment/pin";
 
 export const seatedRow: Movement = {
   name: "seatedRow",
-  max: 50,
+  max: 150,
   focus: "upper",
+  equipmentId: pin.id,
 };

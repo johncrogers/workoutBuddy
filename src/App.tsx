@@ -45,7 +45,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App" style={{ height: "100vh" }}>
       <div className="d-flex justify-content-between">
         {plan.map((week, weekIndex) => {
           return (
@@ -85,12 +85,12 @@ function App() {
         })}
       </div>
       {total > 0 && (
-        <div>
+        <div className="d-flex flex-column justify-content-center h-100">
           <ProgressBar completed={completed} remaining={remaining} />
-          <div className="d-flex justify-content-center mt-4">
+          <div className="d-flex justify-content-center my-auto">
             {remaining > 0 ? (
               <div>
-                <CurrentExerciseDetails {...exercise} />
+                <CurrentExerciseDetails {...exercise} className="m-auto" />
                 <Button color="primary" onClick={handleNextExerciseClick}>
                   Next
                 </Button>
