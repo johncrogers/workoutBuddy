@@ -9,15 +9,7 @@ import { RequiredPlateCountByWeight } from "../../types/RequiredPlateCountByWeig
 export const CurrentExerciseDetails: React.FC<CurrentExerciseDetailsProps> = (
   props: CurrentExerciseDetailsProps,
 ) => {
-  const {
-    name,
-    max,
-    multiplier,
-    volume,
-    equipmentId,
-    className,
-    handleNextExerciseClick,
-  } = props;
+  const { name, max, multiplier, volume, equipmentId, className } = props;
   const liftWeight = max * (multiplier / 100);
   const requiredEquipment: Equipment | undefined = equipment.find(
     ({ id }) => equipmentId === id,
@@ -54,9 +46,6 @@ export const CurrentExerciseDetails: React.FC<CurrentExerciseDetailsProps> = (
     <div className={className}>
       <h1>{name}</h1>
       <h2>{`${volume} reps @ ${liftWeight} lbs`}</h2>
-      <Button color="primary" onClick={handleNextExerciseClick}>
-        Next
-      </Button>
       {requiredPlates.length > 0 && (
         <Table>
           <thead>
@@ -85,5 +74,4 @@ export const CurrentExerciseDetails: React.FC<CurrentExerciseDetailsProps> = (
 
 type CurrentExerciseDetailsProps = Exercise & {
   className?: string;
-  handleNextExerciseClick: () => void;
 };

@@ -33,6 +33,10 @@ function App() {
     setCompletedExercises(completed + 1);
     setCurrentExerciseIndex(currentExerciseIndex + 1);
   };
+  const handlePreviousExerciseClick = () => {
+    setCompletedExercises(completed - 1);
+    setCurrentExerciseIndex(currentExerciseIndex - 1);
+  };
   const handleSelectDayClick = (day: Day) => {
     setCompletedExercises(0);
     setSelectedDay(day);
@@ -45,7 +49,7 @@ function App() {
   };
 
   return (
-    <div className="App" style={{ height: "100vh" }}>
+    <div className="App d-flex flex-column" style={{ height: "100vh" }}>
       <div className="d-flex justify-content-between">
         {plan.map((week, weekIndex) => {
           return (
@@ -56,7 +60,7 @@ function App() {
                 handleSelectWeekClick(weekIndex);
               }}
               className={`w-100 text-center ${
-                selectedWeekIndex === weekIndex ? "bg-primary" : ""
+                selectedWeekIndex === weekIndex ? "bg-primary text-white" : ""
               }`}
             >
               {week.name}
@@ -74,9 +78,11 @@ function App() {
                 handleSelectDayClick(day);
               }}
               className={`w-100 text-center ${
-                selectedDay === day ? "bg-primary" : ""
+                selectedDay === day ? "bg-primary text-white" : ""
               } ${
-                currentWeek.cyclesByDay[day].length > 0 ? "" : "bg-secondary"
+                currentWeek.cyclesByDay[day].length > 0
+                  ? ""
+                  : "bg-secondary text-white"
               }`}
             >
               {day}
@@ -85,21 +91,43 @@ function App() {
         })}
       </div>
       {total > 0 && (
-        <div className="d-flex flex-column justify-content-center h-100">
+        <div className="h-100">
           <ProgressBar completed={completed} remaining={remaining} />
-          <div className="d-flex justify-content-center my-auto">
-            {remaining > 0 ? (
-              <div>
-                <CurrentExerciseDetails
-                  {...exercise}
-                  className="m-auto"
-                  handleNextExerciseClick={handleNextExerciseClick}
-                />
+          {remaining > 0 ? (
+            <div className="d-flex justify-content-center h-100">
+              <div
+                className={`${
+                  completed > 0 ? "bg-primary" : "bg-secondary"
+                } px-4 text-white d-flex`}
+                role="button"
+                onClick={() => {
+                  if (completed > 0) {
+                    handlePreviousExerciseClick();
+                  }
+                }}
+              >
+                <div className="my-auto">Back</div>
               </div>
-            ) : (
-              <div className="text-center">Workout Complete!</div>
-            )}
-          </div>
+              <CurrentExerciseDetails {...exercise} className="m-auto" />
+              <div
+                className={`${
+                  remaining > 0 ? "bg-primary" : "bg-primary"
+                } px-4 text-white d-flex`}
+                role="button"
+                onClick={() => {
+                  if (remaining > 0) {
+                    handleNextExerciseClick();
+                  }
+                }}
+              >
+                <div className="my-auto">Next</div>
+              </div>
+            </div>
+          ) : (
+            <div className="h-100 d-flex">
+              <h1 className="text-center m-auto">Workout Complete!</h1>
+            </div>
+          )}
         </div>
       )}
     </div>
