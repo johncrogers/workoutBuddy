@@ -1,0 +1,167 @@
+Terms:
+    ☐ Idea
+        Affected persona
+        Persona need
+        Solution concept
+    ☐ Spec
+        User stories
+        Product requirements
+        Constraints
+    ☐ Metrics
+        Success tracking strategy
+    ☐ User flow diagram
+        Feature flow state map
+    ☐ Visual designs
+        Visualizations by user flow state
+    ☐ Implementation plan
+        Required tasks
+    ☐ Priority
+        Importance and precedence over other work
+    ☐ Assignment
+        Developer assignment
+    ☐ Bandwidth
+        Developer readiness
+    ☐ Pull Request
+        Reviewable code
+    ☐ Merge
+        New commit to master
+    ☐ Testing Plan
+        Operation
+        Usability
+        Adoption
+    ☐ Functionality report
+        Results from internal user testing plan execution
+    ☐ User feedback
+        Results from external user testing plan execution
+    ☐ Release plan
+        When
+        Where
+        Who
+        Contingency
+        Communication
+        Date
+    ☐ Release
+        Deployment
+
+Flow:
+    Discovery:
+        This section is where all new ideas start.
+        Input:
+            ☐ Idea
+        Output:
+            ☐ Spec
+            ☐ User flow diagram
+            ☐ Metrics
+    Design:
+        Input:
+            ☐ Idea
+            ☐ Spec
+            ☐ User flow diagram
+            ☐ Metrics
+        Output:
+            ☐ Visual designs
+            ☐ Implementation plan
+    Backlog:
+        Input:
+            ☐ Idea
+            ☐ Spec
+            ☐ User flow diagram
+            ☐ Metrics
+            ☐ Visual designs
+            ☐ Implementation plan
+        Output:
+            ☐ Priority
+            ☐ Assignment
+    Selected:
+        Input:
+            ☐ Idea
+            ☐ Spec
+            ☐ User flow diagram
+            ☐ Metrics
+            ☐ Visual designs
+            ☐ Implementation plan
+            ☐ Priority
+            ☐ Assignment
+        Output:
+            ☐ Bandwidth
+    Development:
+        Input:
+            ☐ Idea
+            ☐ Spec
+            ☐ User flow diagram
+            ☐ Metrics
+            ☐ Visual designs
+            ☐ Implementation plan
+            ☐ Priority
+            ☐ Assignment
+            ☐ Bandwidth
+        Output:
+            ☐ Pull Request
+    Review:
+        Input:
+            ☐ Idea
+            ☐ Spec
+            ☐ User flow diagram
+            ☐ Metrics
+            ☐ Visual designs
+            ☐ Implementation plan
+            ☐ Priority
+            ☐ Assignment
+            ☐ Bandwidth
+            ☐ Pull Request
+        Output:
+            ☐ Merge
+            ☐ Testing Plan
+    QA:
+        Input:
+            ☐ Idea
+            ☐ Spec
+            ☐ User flow diagram
+            ☐ Metrics
+            ☐ Visual designs
+            ☐ Implementation plan
+            ☐ Priority
+            ☐ Assignment
+            ☐ Bandwidth
+            ☐ Pull Request
+            ☐ Merge
+            ☐ Testing Plan
+        Output:
+            ☐ Functionality report
+    Beta:
+        Input:
+            ☐ Idea
+            ☐ Spec
+            ☐ User flow diagram
+            ☐ Metrics
+            ☐ Visual designs
+            ☐ Implementation plan
+            ☐ Priority
+            ☐ Assignment
+            ☐ Bandwidth
+            ☐ Pull Request
+            ☐ Merge
+            ☐ Testing Plan
+            ☐ Functionality report
+        Output:
+            ☐ User feedback
+            ☐ Release plan
+    Production:
+        Input:
+            ☐ Idea
+            ☐ Spec
+            ☐ User flow diagram
+            ☐ Metrics
+            ☐ Visual designs
+            ☐ Implementation plan
+            ☐ Priority
+            ☐ Assignment
+            ☐ Bandwidth
+            ☐ Pull Request
+            ☐ Merge
+            ☐ Testing Plan
+            ☐ Functionality report
+            ☐ User feedback
+            ☐ Release plan
+        Output:
+            ☐ Release
