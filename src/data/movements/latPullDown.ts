@@ -1,9 +1,9 @@
 import { Movement } from "../../types/Movement";
-import { pin } from "../equipment/pin";
+import { latTower } from "../equipment/latTower";
 
 export const latPullDown: Movement = {
   name: "latPullDown",
   max: 120,
   focus: "upper",
-  equipmentId: pin.id,
+  equipmentId: latTower.id,
 };

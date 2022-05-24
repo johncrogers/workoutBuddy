@@ -90,10 +90,11 @@ function App() {
           <div className="d-flex justify-content-center my-auto">
             {remaining > 0 ? (
               <div>
-                <CurrentExerciseDetails {...exercise} className="m-auto" />
-                <Button color="primary" onClick={handleNextExerciseClick}>
-                  Next
-                </Button>
+                <CurrentExerciseDetails
+                  {...exercise}
+                  className="m-auto"
+                  handleNextExerciseClick={handleNextExerciseClick}
+                />
               </div>
             ) : (
               <div className="text-center">Workout Complete!</div>
