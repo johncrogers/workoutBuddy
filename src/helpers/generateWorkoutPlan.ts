@@ -30,7 +30,7 @@ export function generateWorkoutPlan(
     ) as (keyof typeof movementsByDay)[];
     daysWithMovements.forEach((day) => {
       sets.forEach(({ duration, volume, multiplier }) => {
-        movementsByDay[day]?.forEach(({ name, max, focus }) => {
+        movementsByDay[day]?.forEach(({ name, max, focus, equipmentId }) => {
           week[day].push({
             duration,
             volume,
@@ -38,6 +38,7 @@ export function generateWorkoutPlan(
             max,
             name,
             focus,
+            equipmentId,
           });
         });
       });

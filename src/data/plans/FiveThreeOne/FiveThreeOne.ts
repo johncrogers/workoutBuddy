@@ -6,15 +6,15 @@ import { mediumIntensity } from "./mediumIntensity";
 
 export const FiveThreeOne: Plan = [
   {
-    name: "Low Intensity",
+    name: "Low",
     sets: lowIntensity,
   },
   {
-    name: "Medium Intensity",
+    name: "Medium",
     sets: mediumIntensity,
   },
   {
-    name: "High Intensity",
+    name: "High",
     sets: highIntensity,
   },
   {

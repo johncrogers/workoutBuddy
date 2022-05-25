@@ -1,4 +1,3 @@
-import { Movement } from "./Movement";
-import { Set } from "./Set";
+import { Exercise } from "./Exercise";
 
-export type ExerciseCycles = (Movement & Set)[];
+export type ExerciseCycles = Exercise[];
